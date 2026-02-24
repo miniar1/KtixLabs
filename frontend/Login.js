@@ -298,45 +298,129 @@ return (
           width: '100%',
           maxWidth: { xs: '100%', sm: 450, md: 400, lg: 500 }, 
           mx: 'auto', 
-          p: 2, 
-          boxSizing: 'border-box',
+          p: 3, 
           alignItems: 'center' // Center align items in stack
         }}>
           <Typography variant="h5" textAlign="center" color="#0edff1">
             {isRegister ? "Register" : "Login"}
           </Typography>
+<TextField
+  label="E-mail"
+  {...register("email", { required: true })}
+  fullWidth
+  sx={{
+    backgroundColor: '#fff',
+    borderRadius: '10px',
+    '& .MuiOutlinedInput-root': {
+      borderRadius: '10px',
+      height: '45px',
+      '& fieldset': { border: 'none' },
+      '&:hover fieldset': { border: 'none' },
+      '&.Mui-focused fieldset': { border: 'none' },
+    },
 
-          
+    '& .MuiInputLabel-root': {
+      color: '#0e0e0e',
+      fontWeight: 500,
+      transition: 'all 0.3s ease',
+    },
 
-          <TextField
-            label="E-mail"
-            {...register("email", { required: true })}
-            fullWidth
-            sx={{ borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255)', height: '45px' }}
-          />
-          <TextField
-            label="Password"
-            type="password"
-            {...register("password", { required: true })}
-            fullWidth
-            sx={{ borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255)', height: '45px' }}
-          />
+    '& .MuiInputLabel-root.Mui-focused': {
+      color: '#011114',
+      fontWeight: 600,
+    },
+  }}
+/>
 
           {isRegister && (
-            <>
             <TextField
             label="UserName"
             {...register("userName", { required: true })}
             fullWidth
-            sx={{ borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255)', height: '45px' }}
-          />
+           sx={{ 
+  borderRadius: '10px', 
+  backgroundColor: 'rgba(255, 255, 255)',
+  height: '45px',
+ '& .MuiOutlinedInput-root': {
+      borderRadius: '10px',
+      height: '45px',
+      '& fieldset': { border: 'none' },
+      '&:hover fieldset': { border: 'none' },
+      '&.Mui-focused fieldset': { border: 'none' },
+    },
+    '& .MuiInputLabel-root': {
+      color: '#0e0e0e',
+      fontWeight: 500,
+      transition: 'all 0.3s ease',
+       },
+    '& .MuiInputLabel-root.Mui-focused': {
+      color: '#011114',
+      fontWeight: 600,
+    },
+           }}
+  />)}
+            <TextField
+            label="Password"
+            type="password"
+            {...register("password", { required: true })}
+            fullWidth
+            sx={{ 
+  borderRadius: '10px', 
+  backgroundColor: 'rgba(255, 255, 255)',
+  height: '45px',
+  '& .MuiOutlinedInput-root': {
+      borderRadius: '10px',
+      height: '45px',
+      '& fieldset': { border: 'none' },
+      '&:hover fieldset': { border: 'none' },
+      '&.Mui-focused fieldset': { border: 'none' },
+    },
+
+    '& .MuiInputLabel-root': {
+      color: '#0e0e0e',
+      fontWeight: 500,
+      transition: 'all 0.3s ease',
+     },
+
+    '& .MuiInputLabel-root.Mui-focused': {
+      color: '#011114',
+      fontWeight: 600,
+    },
+  }}/>
+          {isRegister && (
             <TextField
               label="Confirm Password"
               type="password"
               {...register("confirmPassword", { required: true })}
               fullWidth
-              sx={{ borderRadius: '10px', backgroundColor: 'rgb(255, 255, 255)', height: '45px' }}
-            /></>
+              sx={{ 
+  borderRadius: '10px', 
+  backgroundColor: 'rgba(255, 255, 255)',
+  height: '45px',
+  '& .MuiOutlinedInput-root': {
+      borderRadius: '10px',
+      height: '45px',
+
+      '& fieldset': { border: 'none' },
+      '&:hover fieldset': { border: 'none' },
+      '&.Mui-focused fieldset': { border: 'none' },
+    },
+
+    // 🔥 STYLE DU LABEL
+    '& .MuiInputLabel-root': {
+      color: '#0e0e0e',
+      fontWeight: 500,
+      transition: 'all 0.3s ease',
+     
+    },
+
+
+    // 🔥 Quand le champ est focus
+    '& .MuiInputLabel-root.Mui-focused': {
+      color: '#011114',
+      fontWeight: 600,
+    },}}
+            />
           )}  
           {/* Forgot Password Form */}
 {showForgotPassword && (

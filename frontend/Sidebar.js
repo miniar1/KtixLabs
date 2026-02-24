@@ -19,9 +19,15 @@ const Sidebar = ({ onSelect, selectedBoxId, onLogout, showEmptyState = false }) 
   const [boxData, setBoxData] = useState(null);
   const [selectedStep, setSelectedStep] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const[openSteps, setOpenSteps] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
+ const handleToggleSteps = () => {
+    setOpenSteps(prev => !prev);
+    if (openSteps) {
+      setSelectedStep(null);
+    }
+  };
 const assemblySteps = boxData?.steps?.map(step => ({
   id: step.stepNumber,
   name: step.title,
@@ -151,16 +157,43 @@ const assemblySteps = boxData?.steps?.map(step => ({
           {/* Steps list - only show if NOT in empty state mode */}
 {!showEmptyState && !loading && boxData && assemblySteps.length > 0 && (
   <List component="div" sx={{ color: '#ffffff' }}>
-    <Typography sx={{
-      top: 0, backgroundColor: '#282733', zIndex: 1,
-      py: 1, textAlign: 'center',
-      fontWeight: 600, color: '#58c3d1', mb: 1
-    }}>
-      <FolderIcon sx={{ mr: 1, fontSize: { xs: 16, md: 18 }, color: '#58c3d1' }} />
-      {boxData.title}
-    </Typography>
+<Typography 
+  onClick={handleToggleSteps}
+  sx={{
+    cursor: 'pointer',
+    backgroundColor: '#282733',
+    zIndex: 1,
+    py: 1,
+    textAlign: 'center',
+    fontWeight: 600,
+    color: '#58c3d1',
+    mb: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 1,
+    userSelect: 'none'
+  }}
+>
+  <FolderIcon
+    sx={{
+      fontSize: { xs: 16, md: 18 },
+      color: '#58c3d1',
+      transition: 'transform 0.3s ease',
+    }}
+  />
 
-    {assemblySteps.map((step) => (
+  {boxData.title}
+</Typography>
+
+     <Box
+  sx={{
+    maxHeight: openSteps ? '100vh' : '0px',
+    overflow: 'hidden',
+    transition: 'all 0.35s ease'
+  }}
+>
+  {assemblySteps.map((step) => (
       <ListItemButton
         key={step.id}
         onClick={() => handleStepClick(step)} // ✅ passes full step object
@@ -183,7 +216,7 @@ const assemblySteps = boxData?.steps?.map(step => ({
           }}
         />
       </ListItemButton>
-    ))}
+    ))}</Box>
   </List>
 )}
         </Box>

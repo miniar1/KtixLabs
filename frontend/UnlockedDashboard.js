@@ -30,7 +30,8 @@ const UnlockedDashboard = ({ onLogout }) => {
  // Add this ref at the top of your component
 const activeStepRef = useRef(null);
 const stepsBarRef = useRef(null);
-
+const [bottomHeight, setBottomHeight] = useState(180); // default height in px
+const isDragging = useRef(false);
 // Add this effect to scroll to active step whenever it changes
 useEffect(() => {
   if (activeStepRef.current && stepsBarRef.current) {
@@ -113,7 +114,29 @@ const hasUnlockedBox = unlockedBoxes.length > 0;
       setLoading(false);
     }
   };
+useEffect(() => {
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
 
+    const newHeight = window.innerHeight - e.clientY;
+    
+    if (newHeight > 120 && newHeight < 600) {
+      setBottomHeight(newHeight);
+    }
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
+  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('mouseup', handleMouseUp);
+
+  return () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('mouseup', handleMouseUp);
+  };
+}, []);
   useEffect(() => {
     fetchUserBoxes();
   }, []);
@@ -180,6 +203,7 @@ const handleSidebarStepSelect = (step) => {
 if (assemblyMode) {
   return (
     <Box sx={{ 
+        flex: openTheorie ? { xs: 1, md: 2 } : 1,
       display: 'flex', 
       flexDirection: 'row', // ✅ always row
       height: '100vh',
@@ -187,7 +211,7 @@ if (assemblyMode) {
       backgroundColor: '#1a1a2e',
     }}>
       {/* ✅ Hide sidebar on mobile in assembly mode */}
-      <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+      <Box sx={{ display: { xs: 'block', md: 'block' }}}>
         <Sidebar showEmptyState={false} onLogout={onLogout}  onSelect={handleSidebarStepSelect}/>
       </Box>
 
@@ -218,7 +242,8 @@ if (assemblyMode) {
             onClick={handleExitAssembly}
             sx={{
               color: '#fff',
-              backgroundColor: 'rgba(255, 107, 107, 0.2)',
+              ml: { xs: 6, md: 1 },
+              backgroundColor:{ md:'rgba(255, 107, 107, 0.2)',xs:'rgba(255, 107, 107, 0)'},
               width: { xs: 36, md: 44 },
               height: { xs: 36, md: 44 },
               flexShrink: 0,
@@ -283,7 +308,8 @@ if (assemblyMode) {
 
           {/* Image Section */}
           <Box sx={{
-            flex: 1,
+            flex:openTheorie ? { xs: 1, md: 2 } : 1,
+            transition:'all 0.35s ease',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -322,11 +348,21 @@ if (assemblyMode) {
                 src={`http://localhost:5001${assemblySteps[currentStepIndex]?.image}`}
                 alt="step"
                 sx={{
-                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: openTheorie ? { xs: '90%', md: '100%' } : '100%',
                   maxWidth: '100%',
-                  maxHeight: { xs: '40vh', md: '65vh' }, // ✅ smaller on mobile
+                  maxHeight: openTheorie ? { xs: '40vh', md: '50vh' } : { xs: '50vh', md: '70vh' }, // ✅ smaller on mobile
                   objectFit: 'contain',
-                  transition: 'all 0.3s ease',
+                 alignItems: openTheorie ? 'flex-start' : 'center', // ✅ Move left
+                     justifyContent: 'center',
+    paddingRight: openTheorie ? { xs: 2, md: '30%'} : 0, // ✅ Add spacing from right edge
+    transition: 'all 0.35s ease',
+    animation: 'fadeIn 0.3s ease-in',
+                  '@keyframes fadeIn': {
+      from: { opacity: 0, transform: 'translateX(20px)' },
+      to: { opacity: 1, transform: 'translateX(0)' }
+    }   
                 }}
                 onError={(e) => { e.target.src = '/lock.png'; }}
               />
@@ -410,9 +446,41 @@ if (assemblyMode) {
         </Box>
 
         {/* Bottom Steps Bar */}
+       
+   <Box
+  onMouseDown={() => (isDragging.current = true)}
+  sx={{
+    height:6,
+    cursor: 'ns-resize',
+    backgroundColor: 'rgba(128,98,248,0.4)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <Box
+    sx={{
+      width: 40,
+      height: 3,
+      borderRadius: 2,
+      backgroundColor: '#888'
+    }}
+  />
+</Box>    
+<Box
+  sx={{
+    height: bottomHeight,
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    backgroundColor: 'rgba(30,30,30,0.95)',
+    borderTop: '2px solid rgba(128,98,248,0.3)',
+  }}
+>
         <Paper
           ref={stepsBarRef}
           sx={{
+
             backgroundColor: 'rgba(30, 30, 30, 0.95)',
             backdropFilter: 'blur(10px)',
             borderTop: '2px solid rgba(128, 98, 248, 0.3)',
@@ -449,6 +517,7 @@ if (assemblyMode) {
             >
               {/* Step number - always visible */}
               <Typography sx={{
+               
                 color: currentStepIndex === index ? 'rgb(98, 206, 248)' : '#888',
                 fontWeight: 700,
                 fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.9rem' },
@@ -470,8 +539,8 @@ if (assemblyMode) {
             </Box>
           ))}
         </Paper>
-
         {/* Description Box */}
+
         <Box sx={{
           backgroundColor: 'rgba(30, 30, 30, 0.95)',
           p: { xs: 1, md: 2 },
@@ -505,10 +574,13 @@ if (assemblyMode) {
                 dangerouslySetInnerHTML={{ __html: assemblySteps[currentStepIndex].description }}
               />
             </Box>
+            
           )}
         </Box>
+        </Box>
+        </Box>
 
-      </Box>
+       
     </Box>
   );
 }
