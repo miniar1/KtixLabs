@@ -1,0 +1,253 @@
+{
+  "boxId": "1",
+  "unlockCode": "salemktix1",
+  "title": "Electrical Cabinet",
+  "version": "1.0-production",
+  "description": "This box guides you through the complete assembly and wiring of the electrical cabinet. You'll learn how to install components, wire circuits, and ensure everything is set up correctly for safe and efficient operation.",
+  "folderPath": "boxes/box1",
+  "totalSteps": 20,
+  "steps": [
+
+    {
+      "stepNumber": 1,
+      "title": "Unboxing",
+      "theoryPath": "boxes/box1/step1/step1.md",
+      "substeps": [
+        {
+          "substepNumber": 1,
+          "title": "Unbox the Cabinet",
+          "descriptionPath": "boxes/box1/step1/substep1/description.md",
+          "images": ["boxes/box1/step1/substep1/step1substep1.jpg"],
+          "validation": false
+        }
+      ]
+    },
+
+    {
+      "stepNumber": 2,
+      "title": "Install Mounting Plate",
+      "theoryPath": "boxes/box1/step2/step2.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Install Spacers", "descriptionPath": "boxes/box1/step2/substep1/description.md", "images": ["boxes/box1/step2/substep1/step2substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Install Mounting Plate", "descriptionPath": "boxes/box1/step2/substep2/description.md", "images": ["boxes/box1/step2/substep2/step2substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step2/substep3/description.md", "images": ["boxes/box1/step2/substep3/step2substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 3,
+      "title": "Fix The Cable Duct",
+      "theoryPath": "boxes/box1/step3/step3.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Cut Cable Duct", "descriptionPath": "boxes/box1/step3/substep1/description.md", "images": ["boxes/box1/step3/substep1/step3substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Attach Cable Duct", "descriptionPath": "boxes/box1/step3/substep2/description.md", "images": ["boxes/box1/step3/substep2/step3substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step3/substep3/description.md", "images": ["boxes/box1/step3/substep3/step3substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 4,
+      "title": "Fix The DIN Rail",
+      "theoryPath": "boxes/box1/step4/step4.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Cut DIN Rail", "descriptionPath": "boxes/box1/step4/substep1/description.md", "images": ["boxes/box1/step4/substep1/step4substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Attach DIN Rail", "descriptionPath": "boxes/box1/step4/substep2/description.md", "images": ["boxes/box1/step4/substep2/step4substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step4/substep3/description.md", "images": ["boxes/box1/step4/substep3/step4substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 5,
+      "title": "Install Command Circuit Components",
+      "theoryPath": "boxes/box1/step5/step5.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Prepare Components", "descriptionPath": "boxes/box1/step5/substep1/description.md", "images": ["boxes/box1/step5/substep1/step5substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Install LED Indicators", "descriptionPath": "boxes/box1/step5/substep2/description.md", "images": ["boxes/box1/step5/substep2/step5substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Install Emergency Stop", "descriptionPath": "boxes/box1/step5/substep3/description.md", "images": ["boxes/box1/step5/substep3/step5substep3.jpg"], "validation": false },
+        { "substepNumber": 4, "title": "Install Push Buttons", "descriptionPath": "boxes/box1/step5/substep4/description.md", "images": ["boxes/box1/step5/substep4/step5substep4.jpg"], "validation": false },
+        { "substepNumber": 5, "title": "Install Selector Switch", "descriptionPath": "boxes/box1/step5/substep5/description.md", "images": ["boxes/box1/step5/substep5/step5substep5.jpg"], "validation": false },
+        { "substepNumber": 6, "title": "Install 32A Circuit Breaker", "descriptionPath": "boxes/box1/step5/substep6/description.md", "images": ["boxes/box1/step5/substep6/step5substep6.jpg"], "validation": false },
+        { "substepNumber": 7, "title": "Install Contactor", "descriptionPath": "boxes/box1/step5/substep7/description.md", "images": ["boxes/box1/step5/substep7/step5substep7.jpg"], "validation": false },
+        { "substepNumber": 8, "title": "Install 16A Circuit Breakers", "descriptionPath": "boxes/box1/step5/substep8/description.md", "images": ["boxes/box1/step5/substep8/step5substep8.jpg"], "validation": false },
+        { "substepNumber": 9, "title": "Install Terminal Distributor Box 1", "descriptionPath": "boxes/box1/step5/substep9/description.md", "images": ["boxes/box1/step5/substep9/step5substep9.jpg"], "validation": false },
+        { "substepNumber": 10, "title": "Validation", "descriptionPath": "boxes/box1/step5/substep10/description.md", "images": ["boxes/box1/step5/substep10/step5substep10.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 6,
+      "title": "Cable Command Circuit",
+      "theoryPath": "boxes/box1/step6/step6.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Selector Switch - Circuit Breaker 32Aa", "descriptionPath": "boxes/box1/step6/substep1/description.md", "images": ["boxes/box1/step6/substep1/step6substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Circuit Breaker 32A – Green light indicator", "descriptionPath": "boxes/box1/step6/substep2/description.md", "images": ["boxes/box1/step6/substep2/step6substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Circuit Breaker 32A – Contactor", "descriptionPath": "boxes/box1/step6/substep3/description.md", "images": ["boxes/box1/step6/substep3/step6substep3.jpg"], "validation": false },
+        { "substepNumber": 4, "title": "Circuit Breakers 16A – Contactor", "descriptionPath": "boxes/box1/step6/substep4/description.md", "images": ["boxes/box1/step6/substep4/step6substep4.jpg"], "validation": false },
+        { "substepNumber": 5, "title": "Circuit Breakers 16A – Emergency Stop", "descriptionPath": "boxes/box1/step6/substep5/description.md", "images": ["boxes/box1/step6/substep5/step6substep5.jpg"], "validation": false },
+        { "substepNumber": 6, "title": "Emergency Stop – Start push button", "descriptionPath": "boxes/box1/step6/substep6/description.md", "images": ["boxes/box1/step6/substep6/step6substep6.jpg"], "validation": false },
+        { "substepNumber": 7, "title": "Start – Stop push buttons", "descriptionPath": "boxes/box1/step6/substep7/description.md", "images": ["boxes/box1/step6/substep7/step6substep7.jpg"], "validation": false },
+        { "substepNumber": 8, "title": "Start push button – Contactor", "descriptionPath": "boxes/box1/step6/substep8/description.md", "images": ["boxes/box1/step6/substep8/step6substep8.jpg"], "validation": true },
+        { "substepNumber": 9, "title": "Contactor - Green light indicator", "descriptionPath": "boxes/box1/step6/substep9/description.md", "images": ["boxes/box1/step6/substep9/step6substep9.jpg"], "validation": true },
+        { "substepNumber": 10, "title": "Contactor - Terminal distributor box (1 or 2)", "descriptionPath": "boxes/box1/step6/substep10/description.md", "images": ["boxes/box1/step6/substep10/step6substep10.jpg"], "validation": true },
+        { "substepNumber": 11, "title": "Validation", "descriptionPath": "boxes/box1/step6/substep11/description.md", "images": ["boxes/box1/step6/substep11/step6substep11.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 7,
+      "title": "Install Servo Drives",
+      "theoryPath": "boxes/box1/step7/step7.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Servo Drives (x6)", "descriptionPath": "boxes/box1/step7/substep1/description.md", "images": ["boxes/box1/step7/substep1/step7substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step7/substep2/description.md", "images": ["boxes/box1/step7/substep2/step7substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 8,
+      "title": "Power Servo Drives",
+      "theoryPath": "boxes/box1/step8/step8.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Distributor Box to 16A Breakers", "descriptionPath": "boxes/box1/step8/substep1/description.md", "images": ["boxes/box1/step8/substep1/step8substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "16A Breakers to Servo Drives (L1/L2)", "descriptionPath": "boxes/box1/step8/substep2/description.md", "images": ["boxes/box1/step8/substep2/step8substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step8/substep3/description.md", "images": ["boxes/box1/step8/substep3/step8substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 9,
+      "title": "Install Ground Bar",
+      "theoryPath": "boxes/box1/step9/step9.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Ground Bar", "descriptionPath": "boxes/box1/step9/substep1/description.md", "images": ["boxes/box1/step9/substep1/step9substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step9/substep2/description.md", "images": ["boxes/box1/step9/substep2/step9substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 10,
+      "title": "Install Cooling System",
+      "theoryPath": "boxes/box1/step10/step10.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Install Intake Fan", "descriptionPath": "boxes/box1/step10/substep1/description.md", "images": ["boxes/box1/step10/substep1/step10substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Install Exhaust Fan", "descriptionPath": "boxes/box1/step10/substep2/description.md", "images": ["boxes/box1/step10/substep2/step10substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Install Fan Filters", "descriptionPath": "boxes/box1/step10/substep3/description.md", "images": ["boxes/box1/step10/substep3/step10substep3.jpg"], "validation": false },
+        { "substepNumber": 4, "title": "Validation", "descriptionPath": "boxes/box1/step10/substep4/description.md", "images": ["boxes/box1/step10/substep4/step10substep4.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 11,
+      "title": "Install DIN Rail Sockets",
+      "theoryPath": "boxes/box1/step11/step11.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount DIN Rail Sockets 1 & 2", "descriptionPath": "boxes/box1/step11/substep1/description.md", "images": ["boxes/box1/step11/substep1/step11substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step11/substep2/description.md", "images": ["boxes/box1/step11/substep2/step11substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 12,
+      "title": "Install Fuse Holder",
+      "theoryPath": "boxes/box1/step12/step12.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Fuse Holder", "descriptionPath": "boxes/box1/step12/substep1/description.md", "images": ["boxes/box1/step12/substep1/step12substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Cable Fuse Holder", "descriptionPath": "boxes/box1/step12/substep2/description.md", "images": ["boxes/box1/step12/substep2/step12substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step12/substep3/description.md", "images": ["boxes/box1/step12/substep3/step12substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 13,
+      "title": "Install Power Supply Unit (24V)",
+      "theoryPath": "boxes/box1/step13/step13.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Power Supply", "descriptionPath": "boxes/box1/step13/substep1/description.md", "images": ["boxes/box1/step13/substep1/step13substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Cable Power Supply", "descriptionPath": "boxes/box1/step13/substep2/description.md", "images": ["boxes/box1/step13/substep2/step13substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step13/substep3/description.md", "images": ["boxes/box1/step13/substep3/step13substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 14,
+      "title": "Install Terminal Block",
+      "theoryPath": "boxes/box1/step14/step14.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Terminal Block", "descriptionPath": "boxes/box1/step14/substep1/description.md", "images": ["boxes/box1/step14/substep1/step14substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Connect Servo Motor Power (U/V/W/PE)", "descriptionPath": "boxes/box1/step14/substep2/description.md", "images": ["boxes/box1/step14/substep2/step14substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Validation", "descriptionPath": "boxes/box1/step14/substep3/description.md", "images": ["boxes/box1/step14/substep3/step14substep3.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 15,
+      "title": "Install Relays (x6)",
+      "theoryPath": "boxes/box1/step15/step15.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Relays on DIN Rail", "descriptionPath": "boxes/box1/step15/substep1/description.md", "images": [], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step15/substep2/description.md", "images": [], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 16,
+      "title": "Cable Motor Brake Circuit",
+      "theoryPath": "boxes/box1/step16/step16.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Power Supply to Relays", "descriptionPath": "boxes/box1/step16/substep1/description.md", "images": ["boxes/box1/step16/substep1/step16substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Relay Coil Wiring", "descriptionPath": "boxes/box1/step16/substep2/description.md", "images": ["boxes/box1/step16/substep2/step16substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Relay coil to Terminal Block", "descriptionPath": "boxes/box1/step16/substep3/description.md", "images": ["boxes/box1/step16/substep3/step16substep3.jpg"], "validation": false },
+        { "substepNumber": 4, "title": "Relay Com to Terminal Block", "descriptionPath": "boxes/box1/step16/substep4/description.md", "images": ["boxes/box1/step16/substep4/step16substep4.jpg"], "validation": false },
+        { "substepNumber": 5, "title": "Connect Negative Lines", "descriptionPath": "boxes/box1/step16/substep5/description.md", "images": ["boxes/box1/step16/substep5/step16substep5.jpg"], "validation": false },
+        {"substepNumber": 6, "title": "Motor Brake Final Connection (CN1)", "descriptionPath": "boxes/box1/step16/substep6/description.md", "images": ["boxes/box1/step16/substep6/step16substep6.jpg"], "validation": false },
+        { "substepNumber": 7, "title": "Validation", "descriptionPath": "boxes/box1/step16/substep7/description.md", "images": ["boxes/box1/step16/substep7/step16substep7.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 17,
+      "title": "Install Harting Connector and Cable Glands",
+      "theoryPath": "boxes/box1/step17/step17.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount Harting 32B Connector", "descriptionPath": "boxes/box1/step17/substep1/description.md", "images": ["boxes/box1/step17/substep1/step17substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step17/substep2/description.md", "images": ["boxes/box1/step17/substep2/step17substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 18,
+      "title": "Cable Harting Connector",
+      "theoryPath": "boxes/box1/step18/step18.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Terminal Block to Harting", "descriptionPath": "boxes/box1/step18/substep1/description.md", "images": ["boxes/box1/step18/substep1/step18substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step18/substep2/description.md", "images": ["boxes/box1/step18/substep2/step18substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 19,
+      "title": "Install Aviation Connectors (GX16 x6)",
+      "theoryPath": "boxes/box1/step19/step19.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Mount GX16 Connectors", "descriptionPath": "boxes/box1/step19/substep1/description.md", "images": ["boxes/box1/step19/substep1/step19substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Validation", "descriptionPath": "boxes/box1/step19/substep2/description.md", "images": ["boxes/box1/step19/substep2/step19substep2.jpg"], "validation": true }
+      ]
+    },
+
+    {
+      "stepNumber": 20,
+      "title": "Cable Inputs and Outputs",
+      "theoryPath": "boxes/box1/step20/step20.md",
+      "substeps": [
+        { "substepNumber": 1, "title": "Cable Servo Outputs (CN1)", "descriptionPath": "boxes/box1/step20/substep1/description.md", "images": ["boxes/box1/step20/substep1/step20substep1.jpg"], "validation": false },
+        { "substepNumber": 2, "title": "Cable Servo Inputs (CN1)", "descriptionPath": "boxes/box1/step20/substep2/description.md", "images": ["boxes/box1/step20/substep2/step20substep2.jpg"], "validation": false },
+        { "substepNumber": 3, "title": "Cable Digital Outputs to Distributor Box 2", "descriptionPath": "boxes/box1/step20/substep3/description.md", "images": ["boxes/box1/step20/substep3/step20substep3.jpg"], "validation": false },
+        { "substepNumber": 4, "title": "Grounding and PE Wiring", "descriptionPath": "boxes/box1/step20/substep4/description.md", "images": ["boxes/box1/step20/substep4/step20substep4.jpg"], "validation": false },
+        { "substepNumber": 5, "title": "Solder Connectors", "descriptionPath": "boxes/box1/step20/substep5/description.md", "images": ["boxes/box1/step20/substep5/step20substep5.jpg"], "validation": false },
+        { "substepNumber": 6, "title": "Motor and Encoder Final Connection", "descriptionPath": "boxes/box1/step20/substep6/description.md", "images": ["boxes/box1/step20/substep6/step20substep6.jpg"], "validation": false },
+        { "substepNumber": 7, "title": "Final System Validation", "descriptionPath": "boxes/box1/step20/substep7/description.md", "images": ["boxes/box1/step20/substep7/step20substep7.jpg"], "validation": true }
+      ]
+    }
+
+  ]
+}
